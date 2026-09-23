@@ -1,0 +1,32 @@
+Generated with the built-in imagegen tool for this project.
+Original generated artwork is used without image edits.
+
+Use case: scientific-educational.
+Asset type: a finished in-game chalkboard texture for a small educational VR escape room about RSA. Landscape, approximately 1.72:1 aspect ratio, preferably 3072 by 1792 pixels.
+Create ONLY the flat front surface of a dark charcoal-green blackboard, filling the entire image. Straight-on orthographic view, no wooden frame, no room, no people, no perspective, no objects outside the board, no watermark. It will be placed inside an existing 3D wooden blackboard frame.
+Style: believable professor's chalk handwriting, lively and slightly imperfect but exceptionally clear and readable in VR. Bold off-white chalk lettering and symbols, sparing pale yellow and mint chalk accents, light erased smudges and fine chalk grain. Spacious clean layout, strong text hierarchy, no decorative clutter, no tiny writing. Keep all content within a 5 percent safe margin.
+Content is a trail of abstract hints for choosing the next machine, using only symbolic formulas: never show actual RSA numbers or an unlock code.
+Top: large handwritten title "THE WAY OUT?"
+Under the title: "Start with N, e and the locked message c."
+Main area: four large, well separated steps in a two by two arrangement. Read across the top row from 1 to 2, then a clear curved arrow from 2 down to 3 at bottom left, then across to 4. Use hand-drawn numbered circles, bold formulas and simple chalk arrows. Each step has the following exact text, in order:
+Top left:
+"1. Split the lock"
+"N = P × Q"
+"Factorization"
+Top right:
+"2. Use both primes"
+"phi = (P - 1) × (Q - 1)"
+"Phi calculation"
+Bottom left:
+"3. Find the missing key"
+"(e × d) mod phi = 1"
+"Modular inverse"
+Bottom right:
+"4. Read the message"
+"m = c^d mod N"
+"Modular exponentiation"
+For c^d, draw d as a clearly readable superscript exponent above c, followed by mod N on the baseline. The step 3 equation is an equality with remainder 1. Spell "phi" as the Latin letters p-h-i throughout, NOT as a Greek character. Preserve parentheses in both formulas exactly.
+Bottom footer, large and readable:
+"Carry the USB. Let the machines do the maths."
+"Take m back to the terminal → unlock."
+A small simple chalk USB doodle beside the footer is welcome. All text in English. Mathematical correctness, exact spelling, legibility, and natural chalk handwriting are the priorities.

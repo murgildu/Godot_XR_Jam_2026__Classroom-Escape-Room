@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://Prefabs/rsa_blackboard.glb" id="1_frame"]
+[ext_resource type="Texture2D" path="res://ImageAssets/rsa_clue_blackboard.png" id="2_artwork"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chalk"]
+shading_mode = 0
+albedo_texture = ExtResource("2_artwork")
+texture_filter = 5
+
+[sub_resource type="QuadMesh" id="QuadMesh_chalk"]
+material = SubResource("StandardMaterial3D_chalk")
+size = Vector2(1.55, 0.9)
+
+[node name="RSAClueBlackboard" type="Node3D"]
+
+[node name="Frame" parent="." instance=ExtResource("1_frame")]
+
+[node name="ChalkWriting" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0.056)
+cast_shadow = 0
+mesh = SubResource("QuadMesh_chalk")

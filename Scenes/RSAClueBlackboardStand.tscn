@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/RSAClueBlackboard.tscn" id="1_board"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stand"]
+albedo_color = Color(0.24, 0.29, 0.29, 1)
+metallic = 0.35
+roughness = 0.65
+
+[sub_resource type="BoxMesh" id="BoxMesh_post"]
+material = SubResource("StandardMaterial3D_stand")
+size = Vector3(0.06, 1.06, 0.06)
+
+[sub_resource type="BoxMesh" id="BoxMesh_foot"]
+material = SubResource("StandardMaterial3D_stand")
+size = Vector3(0.24, 0.06, 0.65)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_board"]
+size = Vector3(2.24, 1.33, 0.16)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_post"]
+size = Vector3(0.06, 1.06, 0.06)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_foot"]
+size = Vector3(0.24, 0.06, 0.65)
+
+[node name="RSAClueBlackboardStand" type="StaticBody3D"]
+
+[node name="Board" parent="." instance=ExtResource("1_board")]
+position = Vector3(0, 1.6, 0)
+scale = Vector3(1.4, 1.4, 1.4)
+
+[node name="BoardCollision" type="CollisionShape3D" parent="."]
+position = Vector3(0, 1.6, 0.04)
+shape = SubResource("BoxShape3D_board")
+
+[node name="LeftPost" type="MeshInstance3D" parent="."]
+position = Vector3(-0.95, 0.59, 0)
+mesh = SubResource("BoxMesh_post")
+
+[node name="RightPost" type="MeshInstance3D" parent="."]
+position = Vector3(0.95, 0.59, 0)
+mesh = SubResource("BoxMesh_post")
+
+[node name="LeftFoot" type="MeshInstance3D" parent="."]
+position = Vector3(-0.95, 0.03, 0)
+mesh = SubResource("BoxMesh_foot")
+
+[node name="RightFoot" type="MeshInstance3D" parent="."]
+position = Vector3(0.95, 0.03, 0)
+mesh = SubResource("BoxMesh_foot")
+
+[node name="LeftPostCollision" type="CollisionShape3D" parent="."]
+position = Vector3(-0.95, 0.59, 0)
+shape = SubResource("BoxShape3D_post")
+
+[node name="RightPostCollision" type="CollisionShape3D" parent="."]
+position = Vector3(0.95, 0.59, 0)
+shape = SubResource("BoxShape3D_post")
+
+[node name="LeftFootCollision" type="CollisionShape3D" parent="."]
+position = Vector3(-0.95, 0.03, 0)
+shape = SubResource("BoxShape3D_foot")
+
+[node name="RightFootCollision" type="CollisionShape3D" parent="."]
+position = Vector3(0.95, 0.03, 0)
+shape = SubResource("BoxShape3D_foot")
