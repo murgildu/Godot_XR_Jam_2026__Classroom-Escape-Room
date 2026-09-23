@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cx3qyj8ces13n"
+path="res://.godot/imported/shape-triangular-prism-low.obj-379985055601a9c3a5d1ee507eb51ac7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shape-triangular-prism-low.obj-379985055601a9c3a5d1ee507eb51ac7.mesh"]
+
+source_file="res://assets/kenney.nl/prototype-kit/Models/OBJ format/shape-triangular-prism-low.obj"
+dest_files=["res://.godot/imported/shape-triangular-prism-low.obj-379985055601a9c3a5d1ee507eb51ac7.mesh", "res://.godot/imported/shape-triangular-prism-low.obj-379985055601a9c3a5d1ee507eb51ac7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=true
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(2, 2, 2)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

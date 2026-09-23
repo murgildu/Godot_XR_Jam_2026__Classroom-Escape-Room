@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnyiwi001ovrs"
+path="res://.godot/imported/door-sliding.obj-7f6bd58789e9b6c456901e5def2eaaac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/door-sliding.obj-7f6bd58789e9b6c456901e5def2eaaac.mesh"]
+
+source_file="res://assets/kenney.nl/prototype-kit/Models/OBJ format/door-sliding.obj"
+dest_files=["res://.godot/imported/door-sliding.obj-7f6bd58789e9b6c456901e5def2eaaac.mesh", "res://.godot/imported/door-sliding.obj-7f6bd58789e9b6c456901e5def2eaaac.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=true
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(2, 2, 2)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

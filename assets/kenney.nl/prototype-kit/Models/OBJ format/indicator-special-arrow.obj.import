@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvg3r45fv7qnd"
+path="res://.godot/imported/indicator-special-arrow.obj-35df77f646e4a65bf0db9d74a8e08d0c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/indicator-special-arrow.obj-35df77f646e4a65bf0db9d74a8e08d0c.mesh"]
+
+source_file="res://assets/kenney.nl/prototype-kit/Models/OBJ format/indicator-special-arrow.obj"
+dest_files=["res://.godot/imported/indicator-special-arrow.obj-35df77f646e4a65bf0db9d74a8e08d0c.mesh", "res://.godot/imported/indicator-special-arrow.obj-35df77f646e4a65bf0db9d74a8e08d0c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=true
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(2, 2, 2)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

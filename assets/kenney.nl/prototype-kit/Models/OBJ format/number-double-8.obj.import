@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dl071ous2iho7"
+path="res://.godot/imported/number-double-8.obj-49c47f7caf9079c60d1884d09c39f296.mesh"
+
+[deps]
+
+files=["res://.godot/imported/number-double-8.obj-49c47f7caf9079c60d1884d09c39f296.mesh"]
+
+source_file="res://assets/kenney.nl/prototype-kit/Models/OBJ format/number-double-8.obj"
+dest_files=["res://.godot/imported/number-double-8.obj-49c47f7caf9079c60d1884d09c39f296.mesh", "res://.godot/imported/number-double-8.obj-49c47f7caf9079c60d1884d09c39f296.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=true
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(2, 2, 2)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

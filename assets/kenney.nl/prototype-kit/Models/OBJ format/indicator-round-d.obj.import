@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvuipga3ueh3j"
+path="res://.godot/imported/indicator-round-d.obj-ae9cfb4adc4ee8ef3b7293caaa8e9cf0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/indicator-round-d.obj-ae9cfb4adc4ee8ef3b7293caaa8e9cf0.mesh"]
+
+source_file="res://assets/kenney.nl/prototype-kit/Models/OBJ format/indicator-round-d.obj"
+dest_files=["res://.godot/imported/indicator-round-d.obj-ae9cfb4adc4ee8ef3b7293caaa8e9cf0.mesh", "res://.godot/imported/indicator-round-d.obj-ae9cfb4adc4ee8ef3b7293caaa8e9cf0.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=true
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(2, 2, 2)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

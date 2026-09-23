@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://k76q1t7433n2"]
+
+[ext_resource type="Script" uid="uid://b1cl5qp1h5o3e" path="res://Scripts/Screen.gd" id="1_akj03"]
+[ext_resource type="ArrayMesh" uid="uid://cxex8wgrstk7g" path="res://assets/kenney.nl/prototype-kit/Models/OBJ format/shape-cube.obj" id="1_q82d6"]
+[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="2_0ao36"]
+[ext_resource type="PackedScene" uid="uid://da2qgxxwwitl6" path="res://addons/godot-xr-tools/objects/highlight/highlight_ring.tscn" id="3_0ao36"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_orrw1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_miudv"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_orrw1"]
+
+[node name="SnapTree" type="StaticBody3D" unique_id=1783458438]
+script = ExtResource("1_akj03")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1428833181]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.24992192, 0)
+shape = SubResource("BoxShape3D_orrw1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=672912044]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = ExtResource("1_q82d6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=425373634]
+transform = Transform3D(1, 0, 0, 0, 0.14168096, 0, 0, 0, 0.3919227, 0.17285788, 1.0208186, 0)
+mesh = ExtResource("1_q82d6")
+
+[node name="SnapZone" parent="." unique_id=1949691327 instance=ExtResource("2_0ao36")]
+transform = Transform3D(-0.010149706, 0, 0.9999485, 0, 1, 0, -0.9999485, 0, -0.010149706, 0.28782183, 0.28287137, 0)
+grab_distance = 0.1
+snap_require = "Cube"
+
+[node name="HighlightRing" parent="SnapZone" unique_id=1688316614 instance=ExtResource("3_0ao36")]
+
+[node name="Screen" type="MeshInstance3D" parent="." unique_id=1025843209]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.010159448, 0.24819162, 0.25046518)
+visible = false
+material_override = SubResource("StandardMaterial3D_miudv")
+mesh = SubResource("QuadMesh_orrw1")

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://m5pj6bogn3j4"
+path="res://.godot/imported/weapon-shield.obj-581ac1d4bf2a8de234e8e9e41fc5a247.mesh"
+
+[deps]
+
+files=["res://.godot/imported/weapon-shield.obj-581ac1d4bf2a8de234e8e9e41fc5a247.mesh"]
+
+source_file="res://assets/kenney.nl/prototype-kit/Models/OBJ format/weapon-shield.obj"
+dest_files=["res://.godot/imported/weapon-shield.obj-581ac1d4bf2a8de234e8e9e41fc5a247.mesh", "res://.godot/imported/weapon-shield.obj-581ac1d4bf2a8de234e8e9e41fc5a247.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=true
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(2, 2, 2)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

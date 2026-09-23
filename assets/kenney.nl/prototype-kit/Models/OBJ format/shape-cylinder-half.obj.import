@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://3x6pguy5h45a"
+path="res://.godot/imported/shape-cylinder-half.obj-8e19260ad2d15bd680a83f0c958768c2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shape-cylinder-half.obj-8e19260ad2d15bd680a83f0c958768c2.mesh"]
+
+source_file="res://assets/kenney.nl/prototype-kit/Models/OBJ format/shape-cylinder-half.obj"
+dest_files=["res://.godot/imported/shape-cylinder-half.obj-8e19260ad2d15bd680a83f0c958768c2.mesh", "res://.godot/imported/shape-cylinder-half.obj-8e19260ad2d15bd680a83f0c958768c2.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=true
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(2, 2, 2)
+offset_mesh=Vector3(0.5, 0, 0)
+force_disable_mesh_compression=false

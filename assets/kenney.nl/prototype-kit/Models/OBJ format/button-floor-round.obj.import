@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ce5hu0ia5jget"
+path="res://.godot/imported/button-floor-round.obj-5dd08eb9ac27378c8f606c208e5ab653.mesh"
+
+[deps]
+
+files=["res://.godot/imported/button-floor-round.obj-5dd08eb9ac27378c8f606c208e5ab653.mesh"]
+
+source_file="res://assets/kenney.nl/prototype-kit/Models/OBJ format/button-floor-round.obj"
+dest_files=["res://.godot/imported/button-floor-round.obj-5dd08eb9ac27378c8f606c208e5ab653.mesh", "res://.godot/imported/button-floor-round.obj-5dd08eb9ac27378c8f606c208e5ab653.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=true
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(2, 2, 2)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

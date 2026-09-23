@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://dj0lom5n4ipa1"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_gxrxd"]
+[ext_resource type="Texture2D" uid="uid://duhvw5pve1s00" path="res://assets/misc/pattern.png" id="2_se5x7"]
+[ext_resource type="Script" uid="uid://0b7wkxi4vymb" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="3_d6qv4"]
+[ext_resource type="Script" uid="uid://dx3swqg2owe4p" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand.gd" id="3_juqlf"]
+[ext_resource type="Material" uid="uid://d10c2q5y4lgk5" path="res://stages/TestScene/highlight_material.tres" id="4_gxo8s"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5fkry"]
+margin = 0.01
+height = 0.8
+radius = 0.02
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_juqlf"]
+size = Vector3(0.1, 0.1, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7r46"]
+albedo_color = Color(0.65112984, 0.38674408, 0.070042856, 1)
+albedo_texture = ExtResource("2_se5x7")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_0rupp"]
+material = SubResource("StandardMaterial3D_v7r46")
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.8
+radial_segments = 16
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_v38n2"]
+size = Vector3(0.1, 0.1, 0.2)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_p0l0c"]
+top_radius = 0.025
+bottom_radius = 0.025
+height = 0.81
+radial_segments = 16
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_uciut"]
+size = Vector3(0.105, 0.105, 0.205)
+
+[node name="Hammer" unique_id=1181913467 instance=ExtResource("1_gxrxd")]
+second_hand_grab = 2
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("CylinderShape3D_5fkry")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="1" unique_id=402517673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+shape = SubResource("BoxShape3D_juqlf")
+
+[node name="HammerShaft" type="MeshInstance3D" parent="." index="2" unique_id=1591920172]
+mesh = SubResource("CylinderMesh_0rupp")
+
+[node name="HammerHead" type="MeshInstance3D" parent="HammerShaft" index="0" unique_id=1194624386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+mesh = SubResource("BoxMesh_v38n2")
+
+[node name="XRToolsHighlightVisible" type="Node3D" parent="." index="3" unique_id=132460461]
+script = ExtResource("3_d6qv4")
+metadata/_custom_type_script = "uid://0b7wkxi4vymb"
+
+[node name="ShaftHighlight" type="MeshInstance3D" parent="XRToolsHighlightVisible" index="0" unique_id=1763475172]
+material_override = ExtResource("4_gxo8s")
+mesh = SubResource("CylinderMesh_p0l0c")
+
+[node name="HeadHighlight" type="MeshInstance3D" parent="XRToolsHighlightVisible/ShaftHighlight" index="0" unique_id=1539616474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+material_override = ExtResource("4_gxo8s")
+mesh = SubResource("BoxMesh_uciut")
+
+[node name="LeftPrimaryGrabPoint" type="Marker3D" parent="." index="4" unique_id=1153662550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014202163, -0.26436847, -0.09743282)
+visible = false
+script = ExtResource("3_juqlf")
+mode = 1
+metadata/_custom_type_script = "uid://dx3swqg2owe4p"
+
+[node name="RightPrimaryGrabPoint" type="Marker3D" parent="." index="5" unique_id=1649755789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012207277, -0.26436847, -0.09743282)
+visible = false
+script = ExtResource("3_juqlf")
+hand = 1
+mode = 1
+metadata/_custom_type_script = "uid://dx3swqg2owe4p"
+
+[node name="LeftSecondaryGrabPoint" type="Marker3D" parent="." index="6" unique_id=2125961043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012562484, 0.13471973, -0.10218467)
+visible = false
+script = ExtResource("3_juqlf")
+mode = 2
+drive_position = 0.0
+drive_angle = 0.0
+drive_aim = 1.0
+metadata/_custom_type_script = "uid://dx3swqg2owe4p"
+
+[node name="RightSecondaryGrabPoint" type="Marker3D" parent="." index="7" unique_id=531070286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010405058, 0.13471973, -0.10218467)
+visible = false
+script = ExtResource("3_juqlf")
+hand = 1
+mode = 2
+drive_position = 0.0
+drive_angle = 0.0
+drive_aim = 1.0
+metadata/_custom_type_script = "uid://dx3swqg2owe4p"
