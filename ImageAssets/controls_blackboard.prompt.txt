@@ -1,0 +1,40 @@
+Generated with the built-in imagegen tool for this project.
+Style reference: ImageAssets/rsa_clue_blackboard.png
+Original generated artwork is used without image edits.
+
+Use case: infographic-diagram.
+Asset type: an in-game controls tutorial chalkboard texture for a beginner-friendly VR escape room.
+Input image: STYLE REFERENCE ONLY — the supplied RSA chalkboard. Generate a separate companion board. Match its charcoal-green surface, chalk grain, lightly erased smudges, informal off-white handwritten lettering, mint-green secondary text and pale-yellow highlights. Do not reproduce the RSA content.
+Create ONLY the flat chalkboard surface filling the entire landscape image, about 1.72:1 aspect ratio, preferably 1642 x 958 or higher resolution in the same proportions. Straight-on orthographic view, no frame, no room, no people, no perspective, no watermark. This image will go inside an existing 3D frame beside the reference board.
+Make the instructions exceptionally easy for a first-time VR player: big readable handwriting, plenty of breathing room, four clearly separated areas, friendly simple chalk line drawings, very few words. All content inside a 5 percent safe margin. No mathematical formulas, no numbered sequence. No extra instructions or invented controls.
+Top title, exact text: "HOW TO PLAY"
+Main content in two columns and two rows:
+TOP LEFT:
+Large heading "MOVE"
+Text "Left stick"
+A large simple chalk sketch of the LEFT VR controller, with its thumbstick highlighted pale yellow and four directional arrows around the thumbstick. A small "L" on this controller identifies it. Do not put A on the left controller.
+TOP RIGHT:
+Large heading "TURN"
+Text "Right stick"
+A simple chalk sketch of the RIGHT VR controller, with left/right curved arrows by the thumbstick. A clearly marked round "A" face button, highlighted yellow and indicated with a short pointer.
+Below it, exact text:
+"Hold A to crouch."
+"Release A to stand."
+A small "R" identifies the right controller.
+BOTTOM LEFT:
+Large heading "GRAB & LET GO"
+Text:
+"Either hand"
+"Hold side grip to grab."
+"Release to let go."
+A small clear side-view controller drawing with the SIDE GRIP button at the middle-finger position highlighted yellow, below the front trigger. A simple USB doodle beside it. The highlighted grip must visibly be on the side of the handle, not the top thumbstick or front index trigger.
+BOTTOM RIGHT:
+Large heading "STORE YOUR USB"
+Text:
+"Look down at your belt."
+"Release USB into the sphere."
+"Grip to take it back."
+A simple waist/belt doodle with a round storage sphere at the hip, plus a small USB and an arrow into the sphere.
+Bottom footer separated by a thin chalk underline, exact text:
+"Use a machine: put the USB in its slot and let go."
+No unused-button legends, no menu, jump, teleport or trigger instructions. Do not show an unlock code. Prioritize exact text, clearly distinct left/right controller drawings, large readable labels, and the same natural chalk handwriting as the reference.
