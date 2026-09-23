@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://7er43md6vys0"]
+
+[ext_resource type="PackedScene" uid="uid://k76q1t7433n2" path="res://stages/TestScene/snap_tree.tscn" id="1_4s11o"]
+
+[node name="Node3D" type="Node3D" unique_id=99679489]
+
+[node name="SnapTree" parent="." unique_id=1783458438 instance=ExtResource("1_4s11o")]
+
+[node name="Label3D" type="Label3D" parent="SnapTree/instruction_panel2/instruction_panel/instruction_faceOn" parent_id_path=PackedInt32Array(1783458438, 28555298, 1468759084) index="0" unique_id=53396974]
+transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, 0, 0.014453605, 0.003647536)
+text = "p=1009
+q=1013
+Phi=1020096"
+font_size = 74
+
+[editable path="SnapTree"]
+[editable path="SnapTree/instruction_panel2"]

@@ -13,6 +13,16 @@
 [ext_resource type="PackedScene" uid="uid://cdb85mtga2q5f" path="res://stages/TestScene/cube.tscn" id="11_xmli6"]
 [ext_resource type="PackedScene" uid="uid://obh6clcuequj" path="res://stages/TestScene/table.tscn" id="13_m23fn"]
 [ext_resource type="PackedScene" uid="uid://k76q1t7433n2" path="res://stages/TestScene/snap_tree.tscn" id="13_xmli6"]
+[ext_resource type="PackedScene" uid="uid://bykyeht66g43y" path="res://Prefabs/workstation.glb" id="14_l7gkf"]
+[ext_resource type="PackedScene" uid="uid://h1vf8dcr0dv6" path="res://Scenes/Door_Timer.tscn" id="15_l7gkf"]
+[ext_resource type="PackedScene" uid="uid://3frbamofthbi" path="res://Prefabs/desk_lamp.glb" id="16_cx0xt"]
+[ext_resource type="PackedScene" uid="uid://bary6o8hl630i" path="res://Prefabs/mug.glb" id="17_jtlqu"]
+[ext_resource type="PackedScene" uid="uid://daq2hxtyoubxp" path="res://Prefabs/paper_stack.glb" id="18_1tynk"]
+[ext_resource type="PackedScene" uid="uid://q1135e2upylx" path="res://Prefabs/pencil_holder.glb" id="19_e2yog"]
+[ext_resource type="PackedScene" uid="uid://c5f581brd40pm" path="res://Prefabs/professor_clipboard.glb" id="20_ar2pj"]
+[ext_resource type="PackedScene" uid="uid://biapgkfjyboe5" path="res://Prefabs/rsa_blackboard.glb" id="21_1tynk"]
+[ext_resource type="PackedScene" uid="uid://8aiqym3vpuc5" path="res://Scenes/FactorizationMachine.tscn" id="22_e2yog"]
+[ext_resource type="PackedScene" uid="uid://7er43md6vys0" path="res://Scenes/CalculatePhiMachine.tscn" id="23_e2yog"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jt212"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -26,65 +36,69 @@ background_mode = 2
 sky = SubResource("Sky_b568e")
 tonemap_mode = 2
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xmli6"]
+[sub_resource type="QuadMesh" id="QuadMesh_orrw1"]
+
+[sub_resource type="GDScript" id="GDScript_ar2pj"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ar2pj"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m23fn"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y8owq"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_l7gkf"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_12lxb"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vqc7g"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hcvgn"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_opnam"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_0n7nf"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_32wi3"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_tdvam"]
 graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_xmli6")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_ar2pj")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_m23fn")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_y8owq")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_l7gkf")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_12lxb")
 nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_vqc7g")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_hcvgn")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_opnam")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_0n7nf")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jcm5a"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uyycp"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cx0xt"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_d1ds3"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_jtlqu"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ixy2a"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1tynk"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_21urh"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_e2yog"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_47urw"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_ar2pj"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_p7sn1"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_jcm5a")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_uyycp")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_cx0xt")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_d1ds3")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_jtlqu")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_ixy2a")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_1tynk")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_21urh")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_e2yog")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_47urw")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
@@ -114,6 +128,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.614398)
 
 [node name="XRCamera3D" parent="XROrigin3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -0.042143285)
+
+[node name="GameOverScreen" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" index="0" unique_id=1799325823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19735432)
+visible = false
+mesh = SubResource("QuadMesh_orrw1")
+script = SubResource("GDScript_ar2pj")
+
+[node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D/GameOverScreen" index="0" unique_id=730974467]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0.00512743)
+text = "GAME 
+OVER"
+font_size = 83
+
+[node name="YouWinScreen" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" index="1" unique_id=706859781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19735432)
+visible = false
+mesh = SubResource("QuadMesh_orrw1")
+
+[node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D/YouWinScreen" index="0" unique_id=105521088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00512743)
+text = "You Win!"
+font_size = 17
 
 [node name="LeftHand" parent="XROrigin3D" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, -0.5, 1, -0.5)
@@ -151,13 +187,13 @@ bones/23/rotation = Quaternion(0.006871769, -0.0035727466, -0.21195254, 0.977249
 
 [node name="AnimationTree" parent="XROrigin3D/LeftHand/XRToolsCollisionHand/LeftHand" index="1"]
 root_node = NodePath("../Hand_Nails_L")
-tree_root = SubResource("AnimationNodeBlendTree_32wi3")
+tree_root = SubResource("AnimationNodeBlendTree_tdvam")
 
-[node name="MovementTurn" parent="XROrigin3D/LeftHand/XRToolsCollisionHand" index="1" unique_id=1914008164 instance=ExtResource("4_vjwdw")]
-turn_mode = 2
-
-[node name="FunctionPickup" parent="XROrigin3D/LeftHand/XRToolsCollisionHand" index="2" unique_id=2060578689 instance=ExtResource("5_k2vij")]
+[node name="FunctionPickup" parent="XROrigin3D/LeftHand/XRToolsCollisionHand" index="1" unique_id=2060578689 instance=ExtResource("5_k2vij")]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+
+[node name="MovementDirect" parent="XROrigin3D/LeftHand/XRToolsCollisionHand" index="2" unique_id=1154647219 instance=ExtResource("6_k2vij")]
+strafe = true
 
 [node name="RightHand" parent="XROrigin3D" index="2"]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0.5, 1, -0.5)
@@ -195,13 +231,13 @@ bones/23/rotation = Quaternion(0.0068717655, 0.0035727452, 0.21195254, 0.9772492
 
 [node name="AnimationTree" parent="XROrigin3D/RightHand/XRToolsCollisionHand/RightHand" index="1"]
 root_node = NodePath("../Hand_Nails_R")
-tree_root = SubResource("AnimationNodeBlendTree_ar2pj")
+tree_root = SubResource("AnimationNodeBlendTree_p7sn1")
 
-[node name="MovementDirect" parent="XROrigin3D/RightHand/XRToolsCollisionHand" index="1" unique_id=1011939295 instance=ExtResource("6_k2vij")]
-strafe = true
-
-[node name="FunctionPickup" parent="XROrigin3D/RightHand/XRToolsCollisionHand" index="2" unique_id=1144883981 instance=ExtResource("5_k2vij")]
+[node name="FunctionPickup" parent="XROrigin3D/RightHand/XRToolsCollisionHand" index="1" unique_id=1144883981 instance=ExtResource("5_k2vij")]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
+
+[node name="MovementTurn" parent="XROrigin3D/RightHand/XRToolsCollisionHand" index="2" unique_id=1373085301 instance=ExtResource("4_vjwdw")]
+turn_mode = 2
 
 [node name="PlayerBody" parent="XROrigin3D" index="3" unique_id=641213541 instance=ExtResource("7_xmli6")]
 
@@ -211,7 +247,7 @@ transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70
 shape = SubResource("WorldBoundaryShape3D_ucfsc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" index="1" unique_id=530025996]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03881204, -0.026406715, 0.0049335957)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.056307673, -0.07928974, 0.031316996)
 mesh = SubResource("PlaneMesh_k0h4b")
 
 [node name="Node3D" parent="Floor/MeshInstance3D" index="0" unique_id=746120545 instance=ExtResource("13_m23fn")]
@@ -220,22 +256,91 @@ transform = Transform3D(-4.371139e-08, 0, 2.7557573, 0, 1, 0, -1, 0, -1.2045798e
 [node name="Room" parent="." index="4" unique_id=1910100395 instance=ExtResource("9_k0h4b")]
 
 [node name="Cube03" parent="." index="5" unique_id=1126908510 instance=ExtResource("11_xmli6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07883489, 1.2519429, -0.1535657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6838251, 1.1046113, -0.382647)
+metadata/_edit_group_ = true
 
-[node name="SnapTree" parent="." index="6" unique_id=1783458438 instance=ExtResource("13_xmli6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.020565748, 1.0100162, -4.868552)
-
-[node name="Node3D2" parent="." index="7" unique_id=624988632 instance=ExtResource("13_m23fn")]
+[node name="Node3D2" parent="." index="6" unique_id=624988632 instance=ExtResource("13_m23fn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.7557573, -7.063, 0.5, 4.487)
 
-[node name="Node3D" parent="." index="8" unique_id=774536206 instance=ExtResource("13_m23fn")]
+[node name="Node3D" parent="." index="7" unique_id=774536206 instance=ExtResource("13_m23fn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.7557573, 7.098742, 0.5000001, 3.4293993)
 
-[node name="SnapTree2" parent="." index="9" unique_id=1935358867 instance=ExtResource("13_xmli6")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.890706, 1.0100162, 3.316299)
+[node name="SnapTree2" parent="." index="8" unique_id=1935358867 instance=ExtResource("13_xmli6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.221561, 1.0100162, 4.1962333)
 
-[node name="SnapTree3" parent="." index="10" unique_id=274637343 instance=ExtResource("13_xmli6")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.080864, 1.0100162, 4.415209)
+[node name="workstation2" parent="." index="9" unique_id=475807430 instance=ExtResource("14_l7gkf")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, -6.959401, 1, 5.024315)
+
+[node name="workstation3" parent="." index="10" unique_id=2038541487 instance=ExtResource("14_l7gkf")]
+transform = Transform3D(-5.4639237e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.4639237e-08, 7.0566697, 1, 2.810321)
+
+[node name="workstation4" parent="." index="11" unique_id=1914091867 instance=ExtResource("14_l7gkf")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -0.45355392, 1, -5.0664425)
+
+[node name="countdown_housing2" parent="." index="12" unique_id=1299567112 instance=ExtResource("15_l7gkf")]
+transform = Transform3D(-1.3113416e-07, 0, -3, 0, 3, 0, 3, 0, -1.3113416e-07, 7.6987505, 1.2253908, -1.2119503)
+
+[node name="desk_lamp2" parent="." index="13" unique_id=518283287 instance=ExtResource("16_cx0xt")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -1.113, 1, -0.298)
+
+[node name="mug2" parent="." index="14" unique_id=1356501154 instance=ExtResource("17_jtlqu")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.0592949, 1, -0.23861802)
+
+[node name="paper_stack2" parent="." index="15" unique_id=179499196 instance=ExtResource("18_1tynk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.508046, 1.0024767, -0.2531786)
+
+[node name="paper_stack3" parent="." index="16" unique_id=659536164 instance=ExtResource("18_1tynk")]
+transform = Transform3D(0.8342405, 0, 0.5514008, 0, 1, 0, -0.5514008, 0, 0.8342405, -1.508046, 1.0160679, -0.2531786)
+
+[node name="paper_stack4" parent="." index="17" unique_id=2109779978 instance=ExtResource("18_1tynk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.508046, 1.0316231, -0.2531786)
+
+[node name="paper_stack5" parent="." index="18" unique_id=793466386 instance=ExtResource("18_1tynk")]
+transform = Transform3D(0.8342405, 0, 0.5514008, 0, 1, 0, -0.5514008, 0, 0.8342405, -1.508046, 1.0452143, -0.2531786)
+
+[node name="pencil_holder2" parent="." index="19" unique_id=91345501 instance=ExtResource("19_e2yog")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.091, 1, -0.498)
+
+[node name="professor_clipboard2" parent="." index="20" unique_id=376279240 instance=ExtResource("20_ar2pj")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.80575323, 1.0204475, -0.07259017)
+
+[node name="workstation5" parent="." index="21" unique_id=474536471 instance=ExtResource("14_l7gkf")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0.11517286, 1, -0.42197335)
+
+[node name="paper_stack6" parent="." index="22" unique_id=597874224 instance=ExtResource("18_1tynk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6275722, 1.0024767, -0.2883668)
+
+[node name="paper_stack7" parent="." index="23" unique_id=126324200 instance=ExtResource("18_1tynk")]
+transform = Transform3D(0.8342405, 0, 0.5514008, 0, 1, 0, -0.5514008, 0, 0.8342405, 1.6275722, 1.0160679, -0.2883668)
+
+[node name="paper_stack8" parent="." index="24" unique_id=1128409840 instance=ExtResource("18_1tynk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6275722, 1.0316231, -0.2883668)
+
+[node name="paper_stack9" parent="." index="25" unique_id=1383557848 instance=ExtResource("18_1tynk")]
+transform = Transform3D(0.8342405, 0, 0.5514008, 0, 1, 0, -0.5514008, 0, 0.8342405, 1.6275722, 1.0452143, -0.2883668)
+
+[node name="professor_clipboard3" parent="." index="26" unique_id=1121035033 instance=ExtResource("20_ar2pj")]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -6.6433353, 1.0204475, 3.3166997)
+
+[node name="Label3D" type="Label3D" parent="professor_clipboard3" index="1" unique_id=2044327884]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, -2.087968e-23, 0, 2.087968e-23, 0.25, 0, 0.16017056, 0.010542512)
+text = "N =
+ P x "
+font_size = 75
+
+[node name="rsa_blackboard2" parent="." index="27" unique_id=886660056 instance=ExtResource("21_1tynk")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.478095, 1.4198862, 1.9850116)
+
+[node name="Label3D" type="Label3D" parent="rsa_blackboard2" index="1" unique_id=1085443861]
+transform = Transform3D(0.95, 0, 0, 0, 0.95, -7.934278e-23, 0, 7.934278e-23, 0.95, -0.024530292, 0.07797575, 0.055130005)
+text = "N = P x Q"
+font_size = 70
+
+[node name="Node3D3" parent="." index="28" unique_id=1996047347 instance=ExtResource("22_e2yog")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.2116375, 1.0100162, 3.92702)
+
+[node name="Node3D4" parent="." index="29" unique_id=99679489 instance=ExtResource("23_e2yog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6715538, 0.9283416, -5.116426)
 
 [editable path="XROrigin3D/LeftHand/XRToolsCollisionHand/LeftHand"]
 [editable path="XROrigin3D/LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_L"]

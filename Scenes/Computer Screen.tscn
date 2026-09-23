@@ -1,0 +1,64 @@
+[gd_scene format=4 uid="uid://bm8b7s0lr8aeu"]
+
+[ext_resource type="PackedScene" path="res://Prefabs/instruction_panel.glb" id="1_gogcg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6ruu"]
+albedo_color = Color(0.22670749, 0.22670749, 0.22670746, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gogcg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ft4wv"]
+resource_name = "lab_paper"
+albedo_color = Color(0.9452769, 0.9309246, 0.886004, 1)
+roughness = 0.68
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_234aq"]
+_surfaces = [{
+"aabb": AABB(-0.183, -0.132, 0, 0.366, 0.264, 1e-05),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "lab_paper",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("WmQ7vgIrB74AAACAWmQ7PgIrBz4AAACAWmQ7PgIrB74AAACAWmQ7vgIrBz4AAACA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fex3c"]
+resource_name = "instruction_panel_instruction_face_mesh"
+_surfaces = [{
+"aabb": AABB(-0.183, -0.132, 0, 0.366, 0.264, 1e-05),
+"format": 34359742471,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_ft4wv"),
+"name": "lab_paper",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("WmQ7vgIrB74AAACAWmQ7PgIrBz4AAACAWmQ7PgIrB74AAACAWmQ7vgIrBz4AAACA/3//f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AIA=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_234aq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8d6ww"]
+albedo_color = Color(0.5254902, 0.5254902, 0.5254902, 1)
+
+[node name="instruction_panel2" unique_id=28555298 instance=ExtResource("1_gogcg")]
+
+[node name="instruction_accent" parent="instruction_panel" parent_id_path=PackedInt32Array(1058612049) index="1" unique_id=1864741900]
+visible = false
+
+[node name="instruction_face" parent="instruction_panel" parent_id_path=PackedInt32Array(1058612049) index="2" unique_id=649571652]
+material_override = SubResource("StandardMaterial3D_w6ruu")
+
+[node name="instruction_faceOn" type="MeshInstance3D" parent="instruction_panel" parent_id_path=PackedInt32Array(1058612049) index="3" unique_id=1468759084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.018)
+visible = false
+material_override = SubResource("StandardMaterial3D_gogcg")
+mesh = SubResource("ArrayMesh_fex3c")
+
+[node name="instruction_housing" parent="instruction_panel" parent_id_path=PackedInt32Array(1058612049) index="4" unique_id=1383326736]
+material_override = SubResource("StandardMaterial3D_8d6ww")

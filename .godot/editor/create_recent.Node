@@ -1,4 +1,6 @@
+Label3D
 MeshInstance3D
-CollisionShape3D
+TextEdit
 StaticBody3D
+CollisionShape3D
 GridMap

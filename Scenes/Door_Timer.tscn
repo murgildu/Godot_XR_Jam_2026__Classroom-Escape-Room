@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://h1vf8dcr0dv6"]
+
+[ext_resource type="PackedScene" uid="uid://bjfnj0a2r5dvw" path="res://Prefabs/countdown_housing.glb" id="1_m2ji0"]
+[ext_resource type="Script" uid="uid://bav6k2jgpgno1" path="res://Scripts/Timer.gd" id="2_snd1b"]
+
+[node name="countdown_housing2" unique_id=1299567112 instance=ExtResource("1_m2ji0")]
+
+[node name="anchor_mount" parent="countdown_housing" parent_id_path=PackedInt32Array(1486481308) index="0" unique_id=1729060515]
+transform = Transform3D(0.67051184, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="anchor_screen" parent="countdown_housing" parent_id_path=PackedInt32Array(1486481308) index="1" unique_id=1942009193]
+transform = Transform3D(0.67051184, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0415)
+
+[node name="countdown_housing_body" parent="countdown_housing" parent_id_path=PackedInt32Array(1486481308) index="2" unique_id=279587009]
+transform = Transform3D(0.67051184, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.02)
+
+[node name="countdown_screen" parent="countdown_housing" parent_id_path=PackedInt32Array(1486481308) index="3" unique_id=604709214]
+transform = Transform3D(0.67051184, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0405)
+
+[node name="Label3D" type="Label3D" parent="." index="1" unique_id=601050043]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.043714553)
+text = "10:00"
+script = ExtResource("2_snd1b")
