@@ -1,7 +1,7 @@
 extends Label3D
 
 signal timer_finished
-var time_left := 600
+var time_left := 600.0
 var is_running := true
 
 func _process(delta: float) -> void:

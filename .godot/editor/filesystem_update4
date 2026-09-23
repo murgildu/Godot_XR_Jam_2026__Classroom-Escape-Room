@@ -5,6 +5,5 @@ res://addons/godot-xr-tools/misc/hold_button_visualshader.tres
 res://addons/godot-xr-tools/materials/highlight.tres
 res://addons/godot-xr-tools/hands/animations/left/hand_blend_tree.tres
 res://addons/godot-xr-tools/hands/animations/right/hand_blend_tree.tres
+res://Scenes/Door_Timer.tscn
 res://Scripts/Timer.gd
-res://Scenes/CalculatePhiMachine.tscn
-res://Scenes/FactorizationMachine.tscn
