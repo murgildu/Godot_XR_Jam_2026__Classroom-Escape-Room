@@ -1,0 +1,42 @@
+Generated with the built-in imagegen tool for this project.
+Style reference: ImageAssets/rsa_clue_blackboard.png
+The three original generated images are used without image edits.
+
+factorization.png
+Use case: scientific-educational.
+Asset type: one flat chalkboard texture for a machine in a small educational VR escape room.
+Input image role: STYLE REFERENCE ONLY. Match the supplied RSA clue board's realistic off-white handwritten chalk letters, mint-green secondary lettering, pale-yellow accents, dark charcoal-green surface, fine chalk grain and light erased smudges. Generate a new companion board; do not reproduce the four-step layout or its title.
+Landscape, approximately 1.72:1 aspect ratio, 1642 x 958 pixels or higher at the same proportions. Fill the entire image with ONLY the blackboard face: no frame, no room, no perspective, no 3D objects, no watermark.
+This is a small board beside one machine, so use very large readable lettering, only the exact content below, a spacious centered composition, and generous margins. Top heading in believable bold hand-lettered white chalk with a short pale-yellow underline. The central equation is the biggest element. A simple input-to-output line in mint chalk below it. One short white chalk hint at the bottom. Slightly uneven natural handwriting, matching the reference. No typed computer font. No extra text, no numerical examples, no solved answers, no step numbering.
+Exact content:
+Heading: "FACTORIZATION"
+Large central equation: "N = P × Q"
+Input-to-output line: "N → P, Q"
+Bottom hint: "Split N into two primes."
+N, P and Q must be capital letters. The multiplication sign is ×. Mathematical correctness and legibility are essential.
+
+phi.png
+Use case: scientific-educational.
+Asset type: one flat chalkboard texture for a machine in a small educational VR escape room.
+Input image role: STYLE REFERENCE ONLY. Match the supplied RSA clue board's realistic off-white handwritten chalk letters, mint-green secondary lettering, pale-yellow accents, dark charcoal-green surface, fine chalk grain and light erased smudges. Generate a new companion board; do not reproduce the four-step layout or its title.
+Landscape, approximately 1.72:1 aspect ratio, 1642 x 958 pixels or higher at the same proportions. Fill the entire image with ONLY the blackboard face: no frame, no room, no perspective, no 3D objects, no watermark.
+This is a small board beside one machine, so use very large readable lettering, only the exact content below, a spacious centered composition, and generous margins. Top heading in believable bold hand-lettered white chalk with a short pale-yellow underline. The central equation is the biggest element. A simple input-to-output line in mint chalk below it. One short white chalk hint at the bottom. Slightly uneven natural handwriting, matching the reference. No typed computer font. No extra text, no numerical examples, no solved answers, no step numbering.
+Exact content:
+Heading: "PHI CALCULATION"
+Large central equation: "phi = (P - 1) × (Q - 1)"
+Input-to-output line: "P, Q → phi"
+Bottom hint: "Use both primes."
+Write phi with the Latin letters p-h-i, not a Greek symbol. Preserve both sets of parentheses: subtract 1 from P and subtract 1 from Q, THEN multiply. P and Q must be capital letters. The entire equation should fit on one spacious readable line. Mathematical correctness and legibility are essential.
+
+modular_inverse.png
+Use case: scientific-educational.
+Asset type: one flat chalkboard texture for a machine in a small educational VR escape room.
+Input image role: STYLE REFERENCE ONLY. Match the supplied RSA clue board's realistic off-white handwritten chalk letters, mint-green secondary lettering, pale-yellow accents, dark charcoal-green surface, fine chalk grain and light erased smudges. Generate a new companion board; do not reproduce the four-step layout or its title.
+Landscape, approximately 1.72:1 aspect ratio, 1642 x 958 pixels or higher at the same proportions. Fill the entire image with ONLY the blackboard face: no frame, no room, no perspective, no 3D objects, no watermark.
+This is a small board beside one machine, so use very large readable lettering, only the exact content below, a spacious centered composition, and generous margins. Top heading in believable bold hand-lettered white chalk with a short pale-yellow underline. The central equation is the biggest element. A simple input-to-output line in mint chalk below it. One short white chalk hint at the bottom. Slightly uneven natural handwriting, matching the reference. No typed computer font. No extra text, no numerical examples, no solved answers, no step numbering.
+Exact content:
+Heading: "MODULAR INVERSE"
+Large central equation: "(e × d) mod phi = 1"
+Input-to-output line: "e, phi → d"
+Bottom hint: "Find the private key d."
+Write phi with the Latin letters p-h-i, not a Greek symbol. e and d are lowercase. The multiplication sign is ×. The equation must clearly show the remainder equals 1. Mathematical correctness and legibility are essential.
