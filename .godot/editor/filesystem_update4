@@ -7,3 +7,8 @@ res://addons/godot-xr-tools/hands/animations/left/hand_blend_tree.tres
 res://addons/godot-xr-tools/hands/animations/right/hand_blend_tree.tres
 res://Scenes/Door_Timer.tscn
 res://Scripts/Timer.gd
+res://stages/TestScene/cube.tscn
+res://addons/godot-xr-tools/hands/poses/pose_default_left.tres
+res://Resources/HandPoses/usb_left.tres
+res://Resources/HandPoses/usb_right.tres
+res://stages/TestScene/table.tscn

@@ -2,5 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="1"]
 
+[sub_resource type="Animation" id="Animation_rvrxd"]
+
 [resource]
 script = ExtResource("1")
+open_pose = SubResource("Animation_rvrxd")
