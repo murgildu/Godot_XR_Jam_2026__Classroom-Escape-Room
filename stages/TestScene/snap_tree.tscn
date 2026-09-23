@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="2_0ao36"]
 [ext_resource type="PackedScene" uid="uid://da2qgxxwwitl6" path="res://addons/godot-xr-tools/objects/highlight/highlight_ring.tscn" id="3_0ao36"]
 [ext_resource type="PackedScene" uid="uid://bm8b7s0lr8aeu" path="res://Scenes/Computer Screen.tscn" id="5_akj03"]
+[ext_resource type="AudioStream" uid="uid://dr1j63y2gir86" path="res://Audio/usb_insert_exaggerated.wav" id="6_usb_insert"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_orrw1"]
 
@@ -33,6 +34,7 @@ mesh = ExtResource("1_q82d6")
 
 [node name="SnapZone" parent="." unique_id=1949691327 instance=ExtResource("2_0ao36")]
 transform = Transform3D(-0.010149706, 0, 0.9999485, 0, 1, 0, -0.9999485, 0, -0.010149706, 0.28782183, 0.28287137, 0)
+stash_sound = ExtResource("6_usb_insert")
 grab_distance = 0.1
 snap_require = "Cube"
 

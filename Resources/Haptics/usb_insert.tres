@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="XRToolsRumbleEvent" format=3 uid="uid://bvho4g3biwfn4"]
+
+[ext_resource type="Script" uid="uid://b15qba0ch13uw" path="res://addons/godot-xr-tools/rumble/rumble_event.gd" id="1_event"]
+
+[resource]
+resource_name = "USB insertion pulse"
+script = ExtResource("1_event")
+magnitude = 0.8
+duration_ms = 400

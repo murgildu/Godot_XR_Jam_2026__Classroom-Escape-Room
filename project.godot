@@ -43,6 +43,7 @@ anti_aliasing/quality/use_debanding=true
 [xr]
 
 openxr/enabled=true
+openxr/reference_space=2
 openxr/foveation_level=3
 openxr/foveation_dynamic=true
 shaders/enabled=true

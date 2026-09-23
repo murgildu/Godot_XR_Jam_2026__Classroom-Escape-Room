@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="8_0t3a0"]
 [ext_resource type="Resource" uid="uid://b77pkh47qsuev" path="res://Resources/HandPoses/usb_right.tres" id="11_usb_pose"]
 [ext_resource type="PackedScene" uid="uid://dh8grd7s3n8kg" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_snap.tscn" id="12_dh8u6"]
+[ext_resource type="Script" uid="uid://bp4ghgm7770yk" path="res://Scripts/USBInsertionHaptics.gd" id="13_usb_haptics"]
+[ext_resource type="Resource" uid="uid://bvho4g3biwfn4" path="res://Resources/Haptics/usb_insert.tres" id="14_usb_pulse"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dnsnl"]
 size = Vector3(0.11392822, 0.056912232, 0.2397705)
@@ -47,3 +49,7 @@ editor_preview_mode = 1
 
 [node name="GrabPointSnap" parent="." index="5" unique_id=1981846080 instance=ExtResource("12_dh8u6")]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0.0025978573, 0.094423674)
+
+[node name="InsertionHaptics" type="Node" parent="." index="6" unique_id=1075823767]
+script = ExtResource("13_usb_haptics")
+event = ExtResource("14_usb_pulse")
