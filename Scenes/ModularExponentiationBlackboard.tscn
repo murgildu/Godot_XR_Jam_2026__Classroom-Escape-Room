@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/RSAClueBlackboard.tscn" id="1_board"]
+[ext_resource type="Texture2D" path="res://ImageAssets/MachineBlackboards/modular_exponentiation.png" id="2_artwork"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_chalk"]
+shading_mode = 0
+albedo_texture = ExtResource("2_artwork")
+texture_filter = 5
+
+[node name="ModularExponentiationBlackboard" instance=ExtResource("1_board")]
+
+[node name="ChalkWriting" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_chalk")

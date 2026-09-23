@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="PackedScene" path="res://stages/TestScene/table.tscn" id="1_table"]
+[ext_resource type="PackedScene" path="res://Prefabs/workstation.glb" id="2_workstation"]
+[ext_resource type="PackedScene" path="res://Scenes/ModularExponentiationMachine.tscn" id="3_machine"]
+[ext_resource type="PackedScene" path="res://Prefabs/machine_nameplate.glb" id="4_nameplate"]
+[ext_resource type="PackedScene" path="res://Scenes/ModularExponentiationBlackboard.tscn" id="5_blackboard"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_table"]
+albedo_color = Color(0.62, 0.43, 0.24, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_table"]
+material = SubResource("StandardMaterial3D_table")
+size = Vector3(1, 1, 2.7557573)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_table"]
+size = Vector3(1.0183105, 1, 2.7957042)
+
+[node name="ModularExponentiationStation" type="Node3D"]
+
+[node name="Table" parent="." instance=ExtResource("1_table")]
+position = Vector3(0, 0.5, 0)
+
+[node name="CollisionShape3D" parent="Table/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_table")
+
+[node name="MeshInstance3D" parent="Table/StaticBody3D" index="1"]
+mesh = SubResource("BoxMesh_table")
+
+[node name="Workstation" parent="." instance=ExtResource("2_workstation")]
+transform = Transform3D(-5.4639237e-08, 0, 1.25, 0, 1.25, 0, -1.25, 0, -5.4639237e-08, 0.103599, 1, 0.537315)
+
+[node name="Machine" parent="." instance=ExtResource("3_machine")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.1486375, 1.0100162, -0.55998)
+
+[node name="Nameplate" parent="." instance=ExtResource("4_nameplate")]
+transform = Transform3D(0.027911993, 0, 1.5220288, 0, 5.0691705, 0, 5.0904803, 0, -0.008345542, 0.521882, 0.2683195, -0.047432)
+
+[node name="Label3D" type="Label3D" parent="Nameplate"]
+transform = Transform3D(-0.095966995, 7.946967e-26, 0.00097208354, -3.524741e-38, 0.08713534, -2.9738848e-23, 0.0017598935, 4.8474023e-23, 0.5929407, 0.0061018467, 0.051121548, 0.017215729)
+text = "Modular
+exponentiation
+Machine"
+font_size = 48
+
+[node name="Blackboard" parent="." instance=ExtResource("5_blackboard")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5025885, 2.3035483, -0.274387)
+
+[editable path="Table"]

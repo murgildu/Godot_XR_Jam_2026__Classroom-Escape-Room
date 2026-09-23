@@ -19,3 +19,4 @@ res://Scenes/FactorizationMachine.tscn
 res://stages/TestScene/snap_tree.tscn
 res://Resources/Haptics/usb_insert.tres
 res://addons/godot-xr-tools/rumble/rumbler.gd
+res://Scenes/ModularExponentiationMachine.tscn

@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://stages/TestScene/snap_tree.tscn" id="1_reader"]
+
+[node name="ModularExponentiationMachine" type="Node3D"]
+
+[node name="SnapTree" parent="." instance=ExtResource("1_reader")]
+
+[node name="Label3D" type="Label3D" parent="SnapTree/instruction_panel2/instruction_panel/instruction_faceOn" index="0"]
+position = Vector3(0, 0, 0.003647536)
+scale = Vector3(0.12, 0.12, 0.12)
+text = "c=398724
+d=180017
+N=1022117
+m=467815"
+font_size = 74
+
+[editable path="SnapTree"]
+[editable path="SnapTree/instruction_panel2"]
