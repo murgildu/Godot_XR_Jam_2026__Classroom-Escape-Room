@@ -12,3 +12,7 @@ res://addons/godot-xr-tools/hands/poses/pose_default_left.tres
 res://Resources/HandPoses/usb_left.tres
 res://Resources/HandPoses/usb_right.tres
 res://stages/TestScene/table.tscn
+res://assets/kenney.nl/room.tscn
+res://assets/kenney.nl/prototypekit.meshlib
+res://Scenes/CalculatePhiMachine.tscn
+res://Scenes/FactorizationMachine.tscn
