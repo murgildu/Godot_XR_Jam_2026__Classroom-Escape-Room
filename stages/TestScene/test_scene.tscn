@@ -45,6 +45,7 @@
 [ext_resource type="AudioStream" path="res://Audio/02_phi_calculation.wav" id="43_phi_voice"]
 [ext_resource type="AudioStream" path="res://Audio/03_modular_inverse.wav" id="44_inverse_voice"]
 [ext_resource type="AudioStream" path="res://Audio/04_modular_exponentiation.wav" id="45_exponentiation_voice"]
+[ext_resource type="PackedScene" path="res://Scenes/ProfessorInspection.tscn" id="46_inspection"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jt212"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -67,6 +68,16 @@ albedo_color = Color(0.035, 0.075, 0.065, 1)
 [sub_resource type="QuadMesh" id="QuadMesh_orrw1"]
 material = SubResource("StandardMaterial3D_ending")
 size = Vector2(1.6, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_inspection"]
+render_priority = 96
+shading_mode = 0
+no_depth_test = true
+albedo_color = Color(0.035, 0.055, 0.075, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_inspection"]
+material = SubResource("StandardMaterial3D_inspection")
+size = Vector2(1.75, 0.52)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vugk0"]
 animation = &"Grip"
@@ -230,6 +241,25 @@ outline_size = 4
 no_depth_test = true
 render_priority = 101
 outline_render_priority = 100
+
+[node name="InspectionMessage" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" index="2"]
+position = Vector3(0, 0.42, -1.6)
+visible = false
+cast_shadow = 0
+mesh = SubResource("QuadMesh_inspection")
+
+[node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D/InspectionMessage"]
+position = Vector3(0, 0, 0.01)
+pixel_size = 0.0018
+text = "PROFESSOR APPROACHING - 12
+Hide the USB in your belt!
+Look academically innocent.
+Caught = -3:00"
+font_size = 40
+outline_size = 4
+no_depth_test = true
+render_priority = 98
+outline_render_priority = 97
 
 [node name="LeftHand" parent="XROrigin3D" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, -0.5, 1, -0.5)
@@ -570,6 +600,8 @@ transform = Transform3D(0.091435134, 0, -1.2466514, 0, 1.25, 0, 1.2466514, 0, 0.
 
 [node name="ProfessorUSBWarning" parent="." index="45" instance=ExtResource("40_usb_warning")]
 position = Vector3(0.6838251, 0.73, 0.009)
+
+[node name="ProfessorInspection" parent="." index="46" instance=ExtResource("46_inspection")]
 
 [editable path="XROrigin3D/LeftHand/XRToolsCollisionHand/LeftHand"]
 [editable path="XROrigin3D/LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_L"]

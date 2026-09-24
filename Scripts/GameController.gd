@@ -1,5 +1,7 @@
 extends Node
 
+signal game_ended
+
 enum State { PLAYING, WON, LOST }
 
 const RESTART_BUTTON := "ax_button"
@@ -65,6 +67,7 @@ func _finish_game(result: State) -> void:
 		var introduction: Area3D = machine.get_node("IntroductionArea")
 		introduction.set_deferred("monitoring", false)
 		introduction.get_node("AudioStreamPlayer3D").stop()
+	game_ended.emit()
 
 
 func _on_right_button_pressed(button: String) -> void:
