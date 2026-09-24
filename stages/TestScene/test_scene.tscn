@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cf2bv28uouxem" path="res://assets/kenney.nl/room.tscn" id="9_k0h4b"]
 [ext_resource type="PackedScene" uid="uid://cdb85mtga2q5f" path="res://stages/TestScene/cube.tscn" id="11_xmli6"]
 [ext_resource type="PackedScene" uid="uid://obh6clcuequj" path="res://stages/TestScene/table.tscn" id="13_m23fn"]
-[ext_resource type="PackedScene" uid="uid://k76q1t7433n2" path="res://stages/TestScene/snap_tree.tscn" id="13_xmli6"]
+[ext_resource type="PackedScene" path="res://Scenes/ModularInverseMachine.tscn" id="13_xmli6"]
 [ext_resource type="PackedScene" uid="uid://c7j0c3r2r6uae" path="res://Prefabs/murgilduLogo.glb" id="14_0n7nf"]
 [ext_resource type="PackedScene" uid="uid://bykyeht66g43y" path="res://Prefabs/workstation.glb" id="14_l7gkf"]
 [ext_resource type="PackedScene" uid="uid://h1vf8dcr0dv6" path="res://Scenes/Door_Timer.tscn" id="15_l7gkf"]

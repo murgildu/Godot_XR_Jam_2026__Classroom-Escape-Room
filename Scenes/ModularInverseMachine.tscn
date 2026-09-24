@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://stages/TestScene/snap_tree.tscn" id="1_reader"]
+
+[node name="ModularInverseMachine" instance=ExtResource("1_reader")]
+
+[node name="Label3D" type="Label3D" parent="instruction_panel2/instruction_panel/instruction_faceOn" index="0"]
+position = Vector3(0, 0, 0.003647536)
+scale = Vector3(0.14, 0.14, 0.14)
+text = "e=17
+phi=1020096
+d=180017"
+font_size = 74
+
+[editable path="instruction_panel2"]
