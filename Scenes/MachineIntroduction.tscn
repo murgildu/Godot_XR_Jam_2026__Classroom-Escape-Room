@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/machine_introduction.gd" id="1_introduction"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_proximity"]
+radius = 1.5
+
+[node name="IntroductionArea" type="Area3D"]
+collision_layer = 0
+collision_mask = 0
+monitorable = false
+script = ExtResource("1_introduction")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_proximity")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+unit_size = 2.0
+max_distance = 8.0

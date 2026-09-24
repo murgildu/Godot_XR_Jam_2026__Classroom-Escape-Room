@@ -40,6 +40,11 @@
 [ext_resource type="PackedScene" path="res://Scenes/AdriftBlackboard.tscn" id="38_adrift_board"]
 [ext_resource type="PackedScene" path="res://Scenes/ProfessorRSANotes.tscn" id="39_professor_notes"]
 [ext_resource type="PackedScene" path="res://Scenes/ProfessorUSBWarning.tscn" id="40_usb_warning"]
+[ext_resource type="PackedScene" path="res://Scenes/MachineIntroduction.tscn" id="41_machine_introduction"]
+[ext_resource type="AudioStream" path="res://Audio/01_factorization.wav" id="42_factorization_voice"]
+[ext_resource type="AudioStream" path="res://Audio/02_phi_calculation.wav" id="43_phi_voice"]
+[ext_resource type="AudioStream" path="res://Audio/03_modular_inverse.wav" id="44_inverse_voice"]
+[ext_resource type="AudioStream" path="res://Audio/04_modular_exponentiation.wav" id="45_exponentiation_voice"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jt212"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -418,8 +423,16 @@ transform = Transform3D(1.0269815, 0, 0.011480794, 0, 1, 0, -0.01178768, 0, 1.00
 [node name="Node3D3" parent="." index="29" unique_id=1996047347 instance=ExtResource("22_e2yog")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.2116375, 1.0100162, 3.92702)
 
+[node name="IntroductionArea" parent="Node3D3" index="1" instance=ExtResource("41_machine_introduction")]
+position = Vector3(0.28782183, 0.28287137, 0)
+narration = ExtResource("42_factorization_voice")
+
 [node name="Node3D4" parent="." index="30" unique_id=99679489 instance=ExtResource("23_e2yog")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6715538, 0.9283416, -5.116426)
+
+[node name="IntroductionArea" parent="Node3D4" index="1" instance=ExtResource("41_machine_introduction")]
+position = Vector3(0.28782183, 0.28287137, 0)
+narration = ExtResource("43_phi_voice")
 
 [node name="machine_nameplate2" parent="." index="31" unique_id=361920954 instance=ExtResource("24_ar2pj")]
 transform = Transform3D(0.027911993, 0, 1.5220288, 0, 5.0691705, 0, 5.0904803, 0, -0.008345542, -6.541118, 0.2683195, 4.439568)
@@ -470,6 +483,10 @@ visible = false
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.221561, 1.0100162, 3.4372468)
 script = ExtResource("34_p7sn1")
 
+[node name="IntroductionArea" parent="Node3D5" index="1" instance=ExtResource("41_machine_introduction")]
+position = Vector3(2.1202095, 0.28287137, -0.00000047683716)
+narration = ExtResource("44_inverse_voice")
+
 [node name="SnapTree" parent="Node3D5" index="0" unique_id=273482567 instance=ExtResource("13_xmli6")]
 
 [node name="MeshInstance3D" parent="Node3D5/SnapTree" index="1" unique_id=672912044]
@@ -487,6 +504,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2215917, 0.19999999, 0)
 [node name="ModularExponentiationMachine" parent="." index="39" unique_id=522997033 instance=ExtResource("36_qjyga")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.20369, 1.0100162, -3.09687)
 script = ExtResource("37_nt2f6")
+
+[node name="IntroductionArea" parent="ModularExponentiationMachine" index="1" instance=ExtResource("41_machine_introduction")]
+position = Vector3(0.28782183, 0.28287137, 0)
+narration = ExtResource("45_exponentiation_voice")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." index="40" unique_id=781182857]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6233573, 2.5911636, 5.7871275)
