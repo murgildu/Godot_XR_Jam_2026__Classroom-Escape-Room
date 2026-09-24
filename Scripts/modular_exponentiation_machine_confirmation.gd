@@ -1,5 +1,8 @@
 extends Node3D
+signal completed
+
 var isDone: bool = false;
+@onready var game_controller = get_node("../GameController")
 @onready var ModInvMachine = get_node("/root/MainStaging/Scene/TestScene/Node3D5")
 @onready var  isDoneIndicator= get_node("/root/MainStaging/Scene/TestScene/StaticBody3D3")
 @onready var room = get_node("../Room")
@@ -9,13 +12,18 @@ func _ready() -> void:
 	$SnapTree/SnapZone.has_dropped.connect(_on_snap_tree_dropped)
 
 func _on_snap_tree_picked_up(what_):
+	if not game_controller.is_playing():
+		return
 	if  ModInvMachine.isDone:
-		if not isDone:
+		var first_completion := not isDone
+		if first_completion:
 			room.set_lamp_color(table_material.albedo_color)
 		isDone = true
 		isDoneIndicator.visible=true
 		$SnapTree/instruction_panel2/instruction_panel/instruction_faceOn.visible = true
 		$SnapTree/instruction_panel2/instruction_panel/instruction_face.visible = false
+		if first_completion:
+			completed.emit()
 	else:
 		$SnapTree.play_wrong_order_sound()
 

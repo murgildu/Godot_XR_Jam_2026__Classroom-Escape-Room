@@ -11,3 +11,4 @@ res://Scripts/modular_exponentiation_machine_confirmation.gd
 res://Scripts/Screen.gd
 res://assets/kenney.nl/room.gd
 res://Scripts/factorization_machine_confirmation.gd
+res://Scripts/Timer.gd

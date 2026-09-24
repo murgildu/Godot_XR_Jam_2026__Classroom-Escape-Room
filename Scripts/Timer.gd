@@ -4,6 +4,9 @@ signal timer_finished
 var time_left := 600.0
 var is_running := true
 
+func _ready() -> void:
+	update_text()
+
 func _process(delta: float) -> void:
 	if not is_running:
 		return
@@ -13,12 +16,14 @@ func _process(delta: float) -> void:
 	if time_left <= 0:
 		time_left = 0
 		is_running = false
-		get_node("/root/MainStaging/Scene/TestScene/XROrigin3D/XRCamera3D/GameOverScreen").visible = true
-		get_node("/root/MainStaging/Scene/TestScene/DirectionalLight3D").visible = false
-		get_node("/root/MainStaging/Scene/TestScene/XROrigin3D/LeftHand/XRToolsCollisionHand/LeftHand").visible = false
-		get_node("/root/MainStaging/Scene/TestScene/XROrigin3D/RightHand/XRToolsCollisionHand/RightHand").visible = false
+		update_text()
+		timer_finished.emit()
+		return
 
 	update_text()
+
+func stop() -> void:
+	is_running = false
 
 func update_text() -> void:
 	var minutes := int(time_left) / 60

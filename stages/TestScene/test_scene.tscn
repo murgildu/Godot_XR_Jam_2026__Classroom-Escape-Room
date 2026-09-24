@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bykyeht66g43y" path="res://Prefabs/workstation.glb" id="14_l7gkf"]
 [ext_resource type="PackedScene" uid="uid://h1vf8dcr0dv6" path="res://Scenes/Door_Timer.tscn" id="15_l7gkf"]
 [ext_resource type="PackedScene" uid="uid://3frbamofthbi" path="res://Prefabs/desk_lamp.glb" id="16_cx0xt"]
-[ext_resource type="Script" uid="uid://bkl62kskvdp0m" path="res://Scripts/DoorOpener.gd" id="17_47urw"]
+[ext_resource type="Script" uid="uid://bkl62kskvdp0m" path="res://Scripts/GameController.gd" id="17_47urw"]
 [ext_resource type="PackedScene" uid="uid://bary6o8hl630i" path="res://Prefabs/mug.glb" id="17_jtlqu"]
 [ext_resource type="PackedScene" uid="uid://daq2hxtyoubxp" path="res://Prefabs/paper_stack.glb" id="18_1tynk"]
 [ext_resource type="PackedScene" uid="uid://q1135e2upylx" path="res://Prefabs/pencil_holder.glb" id="19_e2yog"]
@@ -58,9 +58,15 @@ background_mode = 2
 sky = SubResource("Sky_b568e")
 tonemap_mode = 2
 
-[sub_resource type="QuadMesh" id="QuadMesh_orrw1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ending"]
+render_priority = 99
+shading_mode = 0
+no_depth_test = true
+albedo_color = Color(0.035, 0.075, 0.065, 1)
 
-[sub_resource type="GDScript" id="GDScript_ar2pj"]
+[sub_resource type="QuadMesh" id="QuadMesh_orrw1"]
+material = SubResource("StandardMaterial3D_ending")
+size = Vector2(1.6, 0.9)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vugk0"]
 animation = &"Grip"
@@ -182,26 +188,48 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.614398)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -0.042143285)
 
 [node name="GameOverScreen" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" index="0" unique_id=1799325823]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19735432)
+position = Vector3(0, 0, -1.5)
 visible = false
+cast_shadow = 0
 mesh = SubResource("QuadMesh_orrw1")
-script = SubResource("GDScript_ar2pj")
 
 [node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D/GameOverScreen" index="0" unique_id=730974467]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0.00512743)
-text = "GAME 
-OVER"
-font_size = 83
+position = Vector3(0, 0, 0.01)
+pixel_size = 0.002
+modulate = Color(0.96, 0.96, 0.88, 1)
+text = "TIME'S UP!
+
+The professor is back.
+You are still doing algebra.
+
+Press A to try again."
+font_size = 44
+outline_size = 4
+no_depth_test = true
+render_priority = 101
+outline_render_priority = 100
 
 [node name="YouWinScreen" type="MeshInstance3D" parent="XROrigin3D/XRCamera3D" index="1" unique_id=706859781]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.19735432)
+position = Vector3(0, 0, -1.5)
 visible = false
+cast_shadow = 0
 mesh = SubResource("QuadMesh_orrw1")
 
 [node name="Label3D" type="Label3D" parent="XROrigin3D/XRCamera3D/YouWinScreen" index="0" unique_id=105521088]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00512743)
-text = "You Win!"
-font_size = 17
+position = Vector3(0, 0, 0.01)
+pixel_size = 0.002
+modulate = Color(0.96, 0.96, 0.88, 1)
+text = "YOU WIN!
+
+USB decrypted.
+Exam answers acquired.
+
+Press A to play again."
+font_size = 44
+outline_size = 4
+no_depth_test = true
+render_priority = 101
+outline_render_priority = 100
 
 [node name="LeftHand" parent="XROrigin3D" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, -0.5, 1, -0.5)
@@ -330,7 +358,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9669533e-05, -4.553795e-05
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6838251, 1.1046113, -0.382647)
 metadata/_edit_group_ = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="6" unique_id=401742747]
+[node name="GameController" type="Node" parent="." index="6" unique_id=401742747]
 script = ExtResource("17_47urw")
 
 [node name="Node3D2" parent="." index="7" unique_id=624988632 instance=ExtResource("13_m23fn")]
