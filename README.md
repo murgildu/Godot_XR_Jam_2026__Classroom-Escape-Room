@@ -161,15 +161,21 @@ Taking part in the jam is also a learning opportunity for the team. With such a 
 
 ## Reused assets and licenses
 
-We reuse assets from [Bastiaan Olij's ehu-vr-demo](https://codeberg.org/BastiaanOlij/ehu-vr-demo), including environment elements. The room is used as a static environment asset. The GridMap elements use an asset library from [Kenney](https://kenney.nl/).
+We gratefully credit the following asset creators and sources:
+
+- **Kenney:** the project includes assets from the [Prototype Kit](https://kenney.nl/assets/prototype-kit) and [Blaster Kit](https://kenney.nl/assets/blaster-kit), released under **CC0**. The GridMap elements use Kenney's asset library; the original license files are included with the packs.
+- **Bastiaan Olij:** the room and other environment elements come from [ehu-vr-demo](https://codeberg.org/BastiaanOlij/ehu-vr-demo). We use the room as a static environment asset. Bastiaan's Mastodon profile is [@mux213@mastodon.gamedev.place](https://mastodon.gamedev.place/@mux213).
+- **United States Navy:** the professor inspection alarm is adapted from the [WWII submarine dive klaxon recording on Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WWII_submarine_dive_klaxon.ogg), identified there as **public domain**. See [Audio/README.md](Audio/README.md#dive-alarm-source) for the source and audio edits.
 
 Reusing these assets requires preserving the corresponding attribution notices and license files. Time constraints explain this scope decision; they do not change the assets' terms of use or the jam rules.
 
-We release our own work under a MIT license
+We release our own work under the MIT license.
 
 ## Use of AI
 
 We have used **Codex CLI** and **Claude** to help brainstorm and discuss ideas, improve text and code, and produce project documentation, always under human supervision.
+
+Some images used in the game, mainly the **blackboard textures**, were generated with **imagegen** and reviewed by the team before being included.
 
 The team remains responsible for design decisions, content review, and the final result. This statement describes our use so far and will be updated if it changes during development.
 
