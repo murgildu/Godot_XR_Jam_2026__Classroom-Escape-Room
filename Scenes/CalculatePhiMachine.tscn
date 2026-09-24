@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://7er43md6vys0"]
 
 [ext_resource type="PackedScene" uid="uid://k76q1t7433n2" path="res://stages/TestScene/snap_tree.tscn" id="1_4s11o"]
+[ext_resource type="Script" uid="uid://slrqphaf2e4p" path="res://Scripts/calculate_phi_machine_confirmation.gd" id="1_iwmmy"]
 
 [node name="Node3D" type="Node3D" unique_id=99679489]
+script = ExtResource("1_iwmmy")
 
 [node name="SnapTree" parent="." unique_id=1783458438 instance=ExtResource("1_4s11o")]
 

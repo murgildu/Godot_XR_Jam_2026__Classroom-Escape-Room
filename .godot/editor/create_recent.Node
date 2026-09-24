@@ -1,7 +1,8 @@
 MeshInstance3D
+StaticBody3D
+Node3D
+CollisionShape3D
 XRToolsHighlightRing
 Label3D
 TextEdit
-StaticBody3D
-CollisionShape3D
 GridMap

@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://8aiqym3vpuc5"]
 
 [ext_resource type="PackedScene" uid="uid://k76q1t7433n2" path="res://stages/TestScene/snap_tree.tscn" id="1_cduhi"]
+[ext_resource type="Script" uid="uid://btp7l8hwrjvxx" path="res://Scripts/factorization_machine_confirmation.gd" id="1_ceq55"]
 
 [node name="Node3D" type="Node3D" unique_id=1996047347]
+script = ExtResource("1_ceq55")
 
 [node name="SnapTree" parent="." unique_id=1783458438 instance=ExtResource("1_cduhi")]
 

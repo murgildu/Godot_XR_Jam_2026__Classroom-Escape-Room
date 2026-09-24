@@ -1,14 +1,13 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://jr2pesf2ic1r"]
 
-[ext_resource type="PackedScene" path="res://stages/TestScene/snap_tree.tscn" id="1_reader"]
+[ext_resource type="PackedScene" uid="uid://k76q1t7433n2" path="res://stages/TestScene/snap_tree.tscn" id="1_reader"]
 
-[node name="ModularExponentiationMachine" type="Node3D"]
+[node name="ModularExponentiationMachine" type="Node3D" unique_id=959113791]
 
-[node name="SnapTree" parent="." instance=ExtResource("1_reader")]
+[node name="SnapTree" parent="." unique_id=1430199985 instance=ExtResource("1_reader")]
 
-[node name="Label3D" type="Label3D" parent="SnapTree/instruction_panel2/instruction_panel/instruction_faceOn" index="0"]
-position = Vector3(0, 0, 0.003647536)
-scale = Vector3(0.12, 0.12, 0.12)
+[node name="Label3D" type="Label3D" parent="SnapTree/instruction_panel2/instruction_panel/instruction_faceOn" parent_id_path=PackedInt32Array(1430199985, 28555298, 1468759084) index="0" unique_id=879310624]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 0, 0.003647536)
 text = "c=398724
 d=180017
 N=1022117

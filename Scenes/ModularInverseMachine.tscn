@@ -1,12 +1,11 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://7nnx0fa5tjf3"]
 
-[ext_resource type="PackedScene" path="res://stages/TestScene/snap_tree.tscn" id="1_reader"]
+[ext_resource type="PackedScene" uid="uid://k76q1t7433n2" path="res://stages/TestScene/snap_tree.tscn" id="1_reader"]
 
-[node name="ModularInverseMachine" instance=ExtResource("1_reader")]
+[node name="ModularInverseMachine" unique_id=437395637 instance=ExtResource("1_reader")]
 
-[node name="Label3D" type="Label3D" parent="instruction_panel2/instruction_panel/instruction_faceOn" index="0"]
-position = Vector3(0, 0, 0.003647536)
-scale = Vector3(0.14, 0.14, 0.14)
+[node name="Label3D" type="Label3D" parent="instruction_panel2/instruction_panel/instruction_faceOn" parent_id_path=PackedInt32Array(28555298, 1468759084) index="0" unique_id=716625478]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, 0, 0.003647536)
 text = "e=17
 phi=1020096
 d=180017"
