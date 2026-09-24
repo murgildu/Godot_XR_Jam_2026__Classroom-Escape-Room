@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/RSAClueBlackboardStand.tscn" id="1_stand"]
+[ext_resource type="Texture2D" path="res://ImageAssets/adrift_blackboard.png" id="2_adrift"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_adrift"]
+shading_mode = 0
+albedo_texture = ExtResource("2_adrift")
+texture_filter = 5
+
+[node name="AdriftBlackboard" instance=ExtResource("1_stand")]
+
+[node name="ChalkWriting" parent="Board" index="1"]
+material_override = SubResource("StandardMaterial3D_adrift")
+
+[editable path="Board"]

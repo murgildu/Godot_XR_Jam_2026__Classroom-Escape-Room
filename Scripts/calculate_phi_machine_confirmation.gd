@@ -12,6 +12,8 @@ func _on_snap_tree_picked_up(what_):
 		isDoneIndicator.visible=true
 		$SnapTree/instruction_panel2/instruction_panel/instruction_faceOn.visible = true
 		$SnapTree/instruction_panel2/instruction_panel/instruction_face.visible = false
+	else:
+		$SnapTree.play_wrong_order_sound()
 
 func _on_snap_tree_dropped():
 		$SnapTree/instruction_panel2/instruction_panel/instruction_faceOn.visible = false
