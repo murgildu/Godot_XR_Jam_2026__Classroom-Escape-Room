@@ -400,7 +400,7 @@ mesh = SubResource("BoxMesh_e2yog")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.7557573, 7.098742, 0.5000001, 3.4293993)
 
 [node name="CollisionShape3D" parent="Node3D/StaticBody3D" parent_id_path=PackedInt32Array(774536206, 1506271358) index="0" unique_id=975481251]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0008544922, 0, -0.27558637)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0008544922, 0, 0.38080406)
 
 [node name="MeshInstance3D" parent="Node3D/StaticBody3D" parent_id_path=PackedInt32Array(774536206, 1506271358) index="1" unique_id=976085782]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.3895123)
