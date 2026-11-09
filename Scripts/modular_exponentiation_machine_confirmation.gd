@@ -6,7 +6,7 @@ var isDone := false
 var phase: Phase = Phase.Q1
 var inserted := false
 var first_completion := true
-var numb := 1
+@onready var numb = get_node("/root/MainStaging/Scene/TestScene/StaticBody3D").randNum
 var can_press := true
 
 @onready var game_controller = get_node("../GameController")

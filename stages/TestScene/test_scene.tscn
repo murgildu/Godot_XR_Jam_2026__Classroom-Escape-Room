@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://sw82mgutjjg2" path="res://Prefabs/machine_nameplate.glb" id="24_ar2pj"]
 [ext_resource type="AudioStream" uid="uid://cnlbuuln2r72e" path="res://Audio/usb_stash_soft.wav" id="25_usb_stash"]
 [ext_resource type="PackedScene" path="res://Scenes/RSAClueBlackboardStand.tscn" id="26_clue_board"]
+[ext_resource type="Script" uid="uid://dxbf2hvewun6k" path="res://Prefabs/Fac_Clipboard.gd" id="26_p8fpf"]
 [ext_resource type="PackedScene" path="res://Scenes/ControlsBlackboard.tscn" id="27_controls_board"]
 [ext_resource type="PackedScene" path="res://Scenes/PhiBlackboard.tscn" id="28_phi_board"]
 [ext_resource type="PackedScene" path="res://Scenes/ModularInverseBlackboard.tscn" id="29_inverse_board"]
@@ -48,6 +49,9 @@
 [ext_resource type="PackedScene" path="res://Scenes/ProfessorInspection.tscn" id="46_inspection"]
 [ext_resource type="PackedScene" uid="uid://dbv1hvxufc1al" path="res://stages/TestScene/push_button.tscn" id="47_atv2r"]
 [ext_resource type="Script" uid="uid://coycsj0ra27y4" path="res://stages/TestScene/RandomNumber.gd" id="48_qy60a"]
+[ext_resource type="Script" uid="uid://bgwkknr13lq4i" path="res://Prefabs/ModInv_Clipboard.gd" id="50_c3wr1"]
+[ext_resource type="Script" uid="uid://dp1d0d7o3rpm" path="res://Prefabs/Phi_Clipboard.gd" id="50_clpsr"]
+[ext_resource type="Script" uid="uid://0t64q677os0j" path="res://Prefabs/modExp_Clipboard.gd" id="51_rv6kf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jt212"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -81,65 +85,65 @@ albedo_color = Color(0.035, 0.055, 0.075, 1)
 material = SubResource("StandardMaterial3D_inspection")
 size = Vector2(1.75, 0.52)
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qy60a"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rv6kf"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p8fpf"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_clpsr"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_c3wr1"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_aegi8"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rv6kf"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_agcal"]
 animation = &"open_hand"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_clpsr"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ilvks"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_aegi8"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_371n4"]
 graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_qy60a")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_rv6kf")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_p8fpf")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_clpsr")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_c3wr1")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_aegi8")
 nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_rv6kf")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_agcal")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_clpsr")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_ilvks")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_agcal"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_goulq"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ilvks"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jlsup"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_371n4"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_64ymr"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_goulq"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6erfe"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_jlsup"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_27cxg"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_64ymr"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_e47j1"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_agcal")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_goulq")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_ilvks")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_jlsup")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_371n4")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_64ymr")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_goulq")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_6erfe")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_jlsup")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_27cxg")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
@@ -375,7 +379,7 @@ bones/23/rotation = Quaternion(-0.018054774, 0.011455279, -0.10707501, 0.994021)
 
 [node name="AnimationTree" parent="XROrigin3D/LeftHand/XRToolsCollisionHand/LeftHand" index="1"]
 root_node = NodePath("../Hand_Nails_L")
-tree_root = SubResource("AnimationNodeBlendTree_aegi8")
+tree_root = SubResource("AnimationNodeBlendTree_371n4")
 
 [node name="FunctionPickup" parent="XROrigin3D/LeftHand/XRToolsCollisionHand" index="1" unique_id=2060578689 instance=ExtResource("5_k2vij")]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
@@ -419,7 +423,7 @@ bones/23/rotation = Quaternion(0.0068717655, 0.0035727452, 0.21195254, 0.9772492
 
 [node name="AnimationTree" parent="XROrigin3D/RightHand/XRToolsCollisionHand/RightHand" index="1"]
 root_node = NodePath("../Hand_Nails_R")
-tree_root = SubResource("AnimationNodeBlendTree_64ymr")
+tree_root = SubResource("AnimationNodeBlendTree_e47j1")
 
 [node name="FunctionPickup" parent="XROrigin3D/RightHand/XRToolsCollisionHand" index="1" unique_id=1144883981 instance=ExtResource("5_k2vij")]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
@@ -447,7 +451,7 @@ snap_require = "Cube"
 shape = SubResource("WorldBoundaryShape3D_ucfsc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" index="1" unique_id=530025996]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454309, -0.08707077, 0.035034418)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47860932, -0.08707077, 0.035034418)
 mesh = SubResource("PlaneMesh_k0h4b")
 
 [node name="Node3D" parent="Floor/MeshInstance3D" index="0" unique_id=746120545 instance=ExtResource("13_m23fn")]
@@ -457,7 +461,7 @@ transform = Transform3D(-8.243216e-08, 0, 2.7557573, 0, 1, 0, -1.885828, 0, -1.2
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, -0.00023579597, -0.0073037148, -0.00040468574)
 
 [node name="MeshInstance3D" parent="Floor/MeshInstance3D/Node3D/StaticBody3D" parent_id_path=PackedInt32Array(746120545, 1506271358) index="1" unique_id=976085782]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 0.19867875)
 mesh = SubResource("BoxMesh_qjyga")
 
 [node name="murgilduLogo" parent="Floor" index="2" unique_id=1376473788 instance=ExtResource("14_0n7nf")]
@@ -552,6 +556,7 @@ transform = Transform3D(1, 0, 0, 0, 7.54979e-08, 1, 0, -1, 7.54979e-08, 0, 0.014
 
 [node name="professor_clipboard3" parent="." index="26" unique_id=1121035033 instance=ExtResource("20_ar2pj")]
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -6.766792, 1.0204475, 3.4587157)
+script = ExtResource("26_p8fpf")
 
 [node name="Label3D" type="Label3D" parent="professor_clipboard3" index="1" unique_id=1397187989]
 transform = Transform3D(0.081864335, -4.440892e-16, 3.5527137e-15, -2.220446e-16, 0.11102562, -1.1812909e-22, -1.0692668e-15, -4.440892e-16, 0.44498956, 0, 0.19195223, 0.012457609)
@@ -626,16 +631,7 @@ visible = false
 material_override = SubResource("StandardMaterial3D_qy60a")
 mesh = SubResource("ArrayMesh_rv6kf")
 
-[node name="Label3D" parent="Node3D4/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn2" index="0"]
-transform = Transform3D(0.12332871, 0, 0, 0, 0.12590025, 0, 0, 0, 0.16, 0, 0.00026798248, 0.0036475658)
-visible = false
-text = "f1=?
-a) fi = (p-1)*(q-1)
-b) fi = p*q
-c) fi = p + q"
-font_size = 74
-
-[node name="Label3D2" type="Label3D" parent="Node3D4/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn2" index="1" unique_id=716145637]
+[node name="Label3D2" type="Label3D" parent="Node3D4/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn2" index="0" unique_id=716145637]
 transform = Transform3D(0.13633263, 0, 0, 0, 0.11907035, 0, 0, 0, 0.15, 0, -0.0007086992, 0.0036475658)
 text = "q=
 a) 1013 
@@ -649,15 +645,7 @@ visible = false
 material_override = SubResource("StandardMaterial3D_qy60a")
 mesh = SubResource("ArrayMesh_rv6kf")
 
-[node name="Label3D" parent="Node3D4/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn3" index="0"]
-transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, 0, 0.014453605, 0.003647536)
-visible = false
-text = "P=1009
-Q=1013
-Phi=1020096"
-font_size = 74
-
-[node name="Label3D2" type="Label3D" parent="Node3D4/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn3" index="1" unique_id=738264591]
+[node name="Label3D2" type="Label3D" parent="Node3D4/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn3" index="0" unique_id=738264591]
 transform = Transform3D(0.10312034, 0, 0, 0, 0.105920285, 0, 0, 0, 0.15, 0.0006761849, -0.0007086992, 0.0036475658)
 text = "phi=?
 a) phi = (p-1)*(q-1)
@@ -712,13 +700,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.063, 0, -2.513)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="MeshInstance3D" parent="ModularExponentiationStation/Table/StaticBody3D" index="1" unique_id=976085782]
-transform = Transform3D(1.9235147, 0, 0, 0, 1, 0, 0, 0, 1, -0.05870104, 0, 0)
+transform = Transform3D(2.9135911, 0, 0, 0, 1, 0, 0, 0, 1, -0.49187946, 0, 0)
 
 [node name="Machine" parent="ModularExponentiationStation" index="2"]
 visible = false
 
 [node name="Nameplate" parent="ModularExponentiationStation" index="3"]
-transform = Transform3D(0.027911993, 0, 1.5220288, 0, 5.0691705, 0, 5.0904803, 0, -0.008345542, 0.846385, 0.2683195, -0.047431946)
+transform = Transform3D(0.027911993, 0, 1.5220288, 0, 5.0691705, 0, 5.0904803, 0, -0.008345542, 0.98638725, 0.2683195, -0.047431946)
 
 [node name="Node3D5" type="Node3D" parent="." index="38" unique_id=260923910]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.221561, 1.0100162, 5.181009)
@@ -748,15 +736,7 @@ visible = false
 material_override = SubResource("StandardMaterial3D_qy60a")
 mesh = SubResource("ArrayMesh_rv6kf")
 
-[node name="Label3D" parent="Node3D5/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn2" index="0"]
-transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, 0, 0.003647536)
-visible = false
-text = "e=17
-phi=1020096
-d=180017"
-font_size = 74
-
-[node name="Label3D2" type="Label3D" parent="Node3D5/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn2" index="1" unique_id=1575240168]
+[node name="Label3D2" type="Label3D" parent="Node3D5/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn2" index="0" unique_id=1575240168]
 transform = Transform3D(0.14000002, 0, -8.881784e-16, 0, 0.13289753, 0, 8.881784e-16, 0, 0.14000002, 0, 0.0022634864, 0.0036478043)
 text = "e=?
 a) 13 
@@ -770,15 +750,7 @@ visible = false
 material_override = SubResource("StandardMaterial3D_qy60a")
 mesh = SubResource("ArrayMesh_rv6kf")
 
-[node name="Label3D" parent="Node3D5/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn3" index="0"]
-transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, 0, 0.003647536)
-visible = false
-text = "e=17
-phi=1020096
-d=180017"
-font_size = 74
-
-[node name="Label3D2" type="Label3D" parent="Node3D5/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn3" index="1" unique_id=281190119]
+[node name="Label3D2" type="Label3D" parent="Node3D5/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn3" index="0" unique_id=281190119]
 transform = Transform3D(0.10657277, 0, -8.881784e-16, 0, 0.10786423, 0, 0, 0, 0.14000002, 0, 0, 0.0036478043)
 text = "d=?
 a) d = fi^-1 (mod e)
@@ -806,16 +778,7 @@ visible = false
 material_override = SubResource("StandardMaterial3D_qy60a")
 mesh = SubResource("ArrayMesh_rv6kf")
 
-[node name="Label3D" parent="ModularExponentiationMachine/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn2" index="0"]
-transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 0, 0.003647536)
-visible = false
-text = "c=398724
-d=180017
-N=1022117
-m=467815"
-font_size = 74
-
-[node name="Label3D2" type="Label3D" parent="ModularExponentiationMachine/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn2" index="1" unique_id=1730034903]
+[node name="Label3D2" type="Label3D" parent="ModularExponentiationMachine/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn2" index="0" unique_id=1730034903]
 transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 0, 0.003647536)
 text = "d=?
 a) 309197 
@@ -829,16 +792,7 @@ visible = false
 material_override = SubResource("StandardMaterial3D_qy60a")
 mesh = SubResource("ArrayMesh_rv6kf")
 
-[node name="Label3D" parent="ModularExponentiationMachine/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn3" index="0"]
-transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 0, 0.003647536)
-visible = false
-text = "c=398724
-d=180017
-N=1022117
-m=467815"
-font_size = 74
-
-[node name="Label3D2" type="Label3D" parent="ModularExponentiationMachine/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn3" index="1" unique_id=1972296334]
+[node name="Label3D2" type="Label3D" parent="ModularExponentiationMachine/SnapTree/instruction_panel2/instruction_panel/instruction_faceOn3" index="0" unique_id=1972296334]
 transform = Transform3D(0.11393781, 0, 0, 0, 0.12, 0, -8.881784e-16, 0, 0.12, 0, 0, 0.0036473274)
 text = "a=?
 a) a = z^d (mod fi)
@@ -985,6 +939,7 @@ font_size = 100
 
 [node name="professor_clipboard4" parent="." index="54" unique_id=1132559332 instance=ExtResource("20_ar2pj")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.1215421, 0.9106635, -4.5602574)
+script = ExtResource("50_clpsr")
 
 [node name="Label3D" type="Label3D" parent="professor_clipboard4" index="1" unique_id=157929485]
 transform = Transform3D(0.081864335, -4.440892e-16, 3.5527137e-15, -2.220446e-16, 0.11102562, 0, -1.0692668e-15, -4.440892e-16, 0.44498956, 0, 0.2183156, 0.012457669)
@@ -1039,6 +994,7 @@ font_size = 100
 
 [node name="professor_clipboard5" parent="." index="58" unique_id=2013166267 instance=ExtResource("20_ar2pj")]
 transform = Transform3D(-4.371139e-08, 1, 4.371139e-08, 0, -4.371139e-08, 1, 1, 4.371139e-08, 1.9106855e-15, 6.582784, 1.00884, 5.6762757)
+script = ExtResource("50_c3wr1")
 
 [node name="Label3D" type="Label3D" parent="professor_clipboard5" index="1" unique_id=1323660896]
 transform = Transform3D(0.07747808, -4.440892e-16, 3.5527137e-15, -4.440892e-16, 0.11102562, 1.92459e-22, -1.011976e-15, -4.440892e-16, 0.44498956, 0, 0.22849035, 0.012457728)
@@ -1060,6 +1016,7 @@ outline_size = 19
 
 [node name="professor_clipboard6" parent="." index="59" unique_id=846720960 instance=ExtResource("20_ar2pj")]
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -6.3509617, 1.0204475, -3.7231693)
+script = ExtResource("51_rv6kf")
 
 [node name="Label3D" type="Label3D" parent="professor_clipboard6" index="1" unique_id=1931986423]
 transform = Transform3D(0.081864335, -4.440892e-16, 3.5527137e-15, -2.220446e-16, 0.11102562, -1.1812909e-22, -1.0692668e-15, -4.440892e-16, 0.44498956, 0, 0.2447586, 0.012457967)
