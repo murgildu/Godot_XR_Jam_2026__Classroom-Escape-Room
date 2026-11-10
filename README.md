@@ -4,8 +4,7 @@ A small virtual reality escape room that introduces the fundamentals of RSA cryp
 
 A project by [MURGILDU](https://murgildu.github.io/), the XR laboratory at EHU's Faculty of Informatics, created for the [Godot XR Game Jam — September 2026](https://itch.io/jam/godot-xr-game-jam-sep-2026). The jam's theme is **ADRIFT**.
 
-> **Status:** in development. This README describes the intended design and scope; it does not imply that all features have been implemented.
-So few development time is generating PTSD on us!!!!  Requirements, controls, and instructions for running the game will be documented once a playable build is available.
+**Status:** extended version in development. The main build of the game was finished, and now the development of an extended version has started. This new extended version is explained further in the readme.
 
 ## Motivation
 
@@ -19,7 +18,7 @@ You have entered a professor's office to steal a USB drive containing the exams.
 
 The USB drive is protected. To unlock it, you must recover a code encrypted with RSA. The professor's notes contain their public key and a few clues, while the machines around the room let you reconstruct the decryption process.
 
-You have **10 minutes** to recover the code, unlock the USB drive, and release the door through the security terminal. 
+You have **10 minutes** to recover the code and unlock the USB drive by answering the questions on the 4 machines correctly. 
 
 We interpret *Adrift* as a feeling of disorientation: at first, you are surrounded by data and tools whose purpose you do not understand. Each discovery helps you piece together a path to the exit.
 
@@ -27,17 +26,16 @@ We interpret *Adrift* as a feeling of disorientation: at first, you are surround
 
 1. The game begins after a brief introduction and explanation of the controls.
 2. Find the USB drive and read the professor's notes.
-3. Connect the USB drive to the terminal to reveal the encrypted message.
-4. Decide which machine to use and insert the USB drive into its reader.
-5. The machine uses the available data, performs its operation, and displays the result and the formula used.
-6. Retrieve the USB drive and continue until you recover the code.
-7. Return to the terminal and use the recovered code to unlock the USB drive and open the door.
+3. Decide which machine to use and insert the USB drive into its reader.
+4. Once the machine is turend on, choose the option A), B) or C) to select the correct answer
+5. Once the answers have been chosen correclty, retrieve the USB drive and continue until you recover the code.
+6. Once you've interacted with the 4 computers a completion screen will appear.
 
-The USB drive carries your progress: it stores the initial data and the results obtained along the way. The screens let you review those results without having to memorize them.
+The USB drive carries your progress: it stores the initial data and the results obtained along the way. 
 
-If a machine does not yet have the required data, it explains what is missing and preserves your progress. For example: “I need p and q to calculate phi.” Returning to a completed machine lets you view its result again.
+If a machine does not yet have the required data, it will not turn on when the USB is connected.
 
-**Victory:** unlock the USB drive and release the door before time runs out. **Defeat:** the countdown reaches zero; the player can restart.
+**Victory:** Interact with the 4 machines in the correct order and answer the questions correctly. **Defeat:** the countdown reaches zero; the player can restart.
 
 ## What is RSA?
 
@@ -69,7 +67,7 @@ The modular inverse exists when `e` and `phi` are coprime. Finding it means find
 
 > **Educational simplification:** we use small numbers and RSA without the additional mechanisms of a real encryption scheme. Factorization is deliberately easy. The goal is to understand the mathematics, not to demonstrate a practical attack against correctly used RSA. Real applications use much larger moduli and schemes such as RSA-OAEP; see the [RSA specification](https://www.rfc-editor.org/rfc/rfc8017.html).
 
-## Example walkthrough: solving the game
+## Example walkthrough: solving the game (Incorrect information, after the game's development more initial values were added)
 
 > **Spoilers:** this section documents the solution for the team and teaching staff.
 
