@@ -92,6 +92,7 @@ func _on_button_pressed(button) -> void:
 							face_on.visible = true
 							face_on2.visible = false
 							face_on3.visible = false
+			3:
 				match phase:
 					Phase.Q1:
 						if button_letter == "C)3":
